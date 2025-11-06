@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="alert-content">
+    <!-- Heart Icon -->
+        <text class="heart-icon">{{currentHeartRate}}</text>
+
+    <!-- Alert Title -->
+        <text class="alert-title">High Heart Rate Alert!</text>
+
+    <!-- Alert Message -->
+        <text class="alert-message">
+            Your heart rate is above the safe threshold. Please slow down and breathe deeply.
+        </text>
+
+    <!-- Current Heart Rate -->
+        <div class="heart-rate-display">
+            <text class="heart-rate-value">{{currentHeartRate}}</text>
+            <text class="heart-rate-unit">BPM</text>
+        </div>
+
+    <!-- Threshold Info -->
+        <text class="threshold-info">
+            Threshold: {{hrThreshold}} BPM
+        </text>
+
+    <!-- Instructions -->
+        <div class="instructions">
+            <text class="instruction">• Slow your pace</text>
+            <text class="instruction">• Breathe deeply</text>
+            <text class="instruction">• Stay hydrated</text>
+        </div>
+
+    <!-- Return Button -->
+        <input type="button" class="return-button" value="Return to Running" onclick="returnToRunning"></input>
+    </div>
+</div>

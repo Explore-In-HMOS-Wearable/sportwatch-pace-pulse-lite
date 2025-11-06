@@ -1,0 +1,7 @@
+<div class="container">
+    <text class="title">Running Tracker</text>
+    <text class="subtitle">Your Fitness Companion</text>
+    <image  class= "image" src='/common/pedometer.png' ></image>
+    <input type="button" class="start-button" value="Get Started" onclick="navigateToRunningPage"></input>
+
+</div>

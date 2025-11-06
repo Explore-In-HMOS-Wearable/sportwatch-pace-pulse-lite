@@ -1,0 +1,110 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c1f37e51;
+    padding: 30px;
+}
+
+.alert-content {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.heart-icon {
+    font-size: 80px;
+    color: #ff792113;
+    margin-bottom: 20px;
+    animation: heartbeat 1s infinite;
+}
+
+.alert-title {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.alert-message {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 22px;
+}
+
+.heart-rate-display {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.heart-rate-value {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.heart-rate-unit {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.threshold-info {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.instructions {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.instruction {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.return-button {
+    width: 200px;
+    height: 45px;
+    background-color: #ffffff;
+    color: #ff6b6b;
+    border: none;
+    border-radius: 22px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

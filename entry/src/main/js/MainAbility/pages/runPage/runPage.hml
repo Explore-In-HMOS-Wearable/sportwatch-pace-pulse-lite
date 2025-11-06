@@ -1,0 +1,13 @@
+<div class="container" onswipe="touchMove">
+
+    <image  class= "image" src='../../common/step.png' ></image>
+    <text class="subtitle">{{stepcount}} STEPS</text>
+    <div class="seperator" ></div>
+
+    <image  class= "image" src="../../common/heart.png"></image>
+    <text class="subtitle">{{heartbeatcount}} BPM</text>
+    <div class="seperator" ></div>
+
+    <image  class= "image1" src='../../common/run.png' ></image>
+    <text class="subtitle">{{distance}} METERS</text>
+</div>
