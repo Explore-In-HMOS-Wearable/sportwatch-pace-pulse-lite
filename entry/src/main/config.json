@@ -1,6 +1,6 @@
 {
   "app": {
-	"bundleName": "com.hmosdemos.pacepulselite",
+	"bundleName": "com.hmosdemos.lite_wearable.pace_pulse_lite",
 	"vendor": "hmosdemos",
 	"version": {
 	  "code": 1000000,

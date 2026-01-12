@@ -5,11 +5,13 @@
 This is a comprehensive fitness tracking application for running activities with advanced sensor integration and real-time health monitoring features, designed for HarmonyOS NEXT lite-wearable devices. It leverages SensorKit for pedometer and heart rate monitoring.
 
 # Preview
+
 <div>
-    <img src="screenshots/output1.png" width="24%" />
-    <img src="screenshots/output2.png" width="24%" />
-    <img src="screenshots/output3.png" width="24%" />
+<img src="screenshots/output1.png" width="24%" />
+<img src="screenshots/output2.png" width="24%" />
+<img src="screenshots/output3.png" width="24%" />
 </div>
+
 
 # Use Cases
 

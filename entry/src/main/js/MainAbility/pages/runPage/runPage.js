@@ -22,15 +22,15 @@ export default {
         // to listen the sensor wearing state, returns true if wear is in wrist
         sensor.subscribeOnBodyState({
             success: function(response) {
-                console.info('get on-body state value:' + response.value);
+                console.info('get on-body state value: ${response.value}');
                 if(response.value === true) {
                     _this.startHeartRateMonitoring();
                 }
                 this.isOnBodyState=true
             },
             fail: function(data, code) {
-                console.info('fail to get on body state, code:' + code + ', data: ' + data);
-            },
+                console.info('fail to get on body state, code: ${code} data: ${data}');
+            }
         });
         if (_this.heartbeatcount > _this.hrThreshold) {
             _this.navigateToHeartAlert();
@@ -41,8 +41,8 @@ export default {
         let _this = this;
         sensor.subscribeStepCounter({
             success: function (response) {
-                console.info('get step value:' + response.steps);
-                _this.stepcount = response.steps + ' STEPS';
+                console.info('get step value: ${response.steps}');
+                _this.stepcount = '${response.steps} STEPS';
                 _this.calculateDistance(response.steps);
                 if(response.steps % 1000 === 0) {
                     _this.vibrate();
@@ -50,8 +50,8 @@ export default {
                 this.stepSensorSubscribed=true
             },
             fail: function (data, code) {
-                console.info('subscribe step count fail, code:' + code + ', data:' + data);
-            },
+                console.info('subscribe step count fail, code: ${code} data: ${data}');
+            }
         });
 
     },
@@ -60,14 +60,14 @@ export default {
         let _this = this;
         sensor.subscribeHeartRate({
             success: function(response) {
-                _this.heartbeatcount = response.heartRate + ' BPM';
+                _this.heartbeatcount = ' ${response.heartRate} BPM';
                 if (_this.heartbeatcount > _this.hrThreshold) {
                     _this.navigateToHeartAlert();
                 }
             },
             fail: function(data, code) {
-                console.info('subscribe heart rate fail, code: ' + code + ', data: ' + data);
-            },
+                console.info('subscribe heart rate fail, code: ${code} data: ${data}');
+            }
         });
         this.heartRateSensorSubscribed = true;
     },
@@ -76,9 +76,9 @@ export default {
         // Average step length: 0.75 meters
         let stepToMeter = parseInt(steps * 0.75);
         if(stepToMeter < 1000) {
-            this.distance =  stepToMeter + ' METER'
+            this.distance = '{stepToMeter} METER'
         } else {
-            this.distance =  stepToMeter/1000 + ' KM'
+            this.distance =  '${stepToMeter/1000} KM'
         }
 
     },
@@ -91,13 +91,13 @@ export default {
             },
             fail(data, code) {
                 console.info('handle fail, data = ${data}, code = ${code}');
-            },
+            }
         });
     },
 
     touchMove(e) {
 
-        if(e.direction == "right")
+        if(e.direction === "right")
         {
             this.appExit();
         }
@@ -107,7 +107,7 @@ export default {
         router.replace({
             uri: 'pages/heartAlertPage/heartAlertPage',
             params: {
-                currentHeartRate: this.heartbeatcount,
+                currentHeartRate: this.heartbeatcount
             }
         });
     },

@@ -98,7 +98,7 @@ export default {
         this.stopVibration();
 
         router.replace({
-            uri: 'pages/runPage/runPage',
+            uri: 'pages/runPage/runPage'
         });
     },
 
